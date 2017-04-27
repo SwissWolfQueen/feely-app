@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button class="btn btn-primary"
+    (click)="changeImage('happy')">
+    Happy
+  </button>
+  <button class="btn btn-primary"
+    (click)="changeImage('unhappy')">
+    Unhappy
+  </button>
+  <br />
+  <img [src]="imageUrl"/>
+  </ion-content>
