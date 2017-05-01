@@ -7,39 +7,47 @@
 </ion-header>
 
 <ion-content padding>
-  <button class="btn btn-primary"
-    (click)="changeImage('happy')">
-    Happy
-  </button>
-  <button class="btn btn-primary"
-    (click)="changeImage('unhappy')">
-    Unhappy
-  </button>
+  
+  <div *ngIf='isVisible===true'>
+    <button (click)="checkMood('happy')">
+      Happy
+    </button>
+
+    <button (click)="checkMood('unhappy')">
+      Unhappy
+    </button>
+  </div>
+
   <br />
-  <button class="btn btn-primary"
-    (click)="changeImage('annoyed')">
-    Place
-  </button>
-  <button class="btn btn-primary"
-    (click)="changeImage('inLove')">
-    LoveLife
-  </button>
-  <button class="btn btn-primary"
-    (click)="changeImage('excited')">
-    SocialLife
-  </button>
-  <button class="btn btn-primary"
-    (click)="changeImage('feelypourri')">
-    Weather
-  </button>
-  <button class="btn btn-primary"
-    (click)="changeImage('sick')">
-    Health
-  </button>
-  <button class="btn btn-primary"
-    (click)="changeImage('speaking')">
-    FreeTime
-  </button>
+
+  <div *ngIf='isVisible===false'>
+    <button (click)="checkReason('place')">
+      Place
+    </button>
+
+    <button (click)="checkReason('loveLife')">
+      Love Life
+    </button>
+
+    <button (click)="checkReason('socialLife')">
+      Social Life
+    </button>
+
+    <button (click)="checkReason('weather')">
+      Weather
+    </button>
+
+    <button (click)="checkReason('health')">
+      Health
+    </button>
+
+    <button (click)="checkReason('freeTime')">
+      Free Time
+    </button>
+  </div>
+
   <br />
-  <img [src]="imageUrl"/>
+
+  <img [src]="imageUrl">
+
   </ion-content>

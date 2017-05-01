@@ -57287,25 +57287,82 @@ var HomePage = (function () {
         this.nativeStorage = nativeStorage;
         this.title = 'Play with the Feely';
         this.imageUrl = '../assets/img/neutral.png';
+        this.userStateData = {
+            mood: "",
+            reason: "",
+            placeName: "",
+        };
+        this.isVisible = true;
     }
-    HomePage.prototype.changeImage = function (mood) {
+    HomePage.prototype.findImgIdForMoodAndReason = function (mood, reason) {
+        if (mood == 'happy' && reason == 'loveLife') {
+            return 'inLove';
+        }
+        if (mood == 'unhappy' && reason == 'loveLife') {
+            return 'sad';
+        }
+        if (mood == 'happy' && reason == 'socialLife') {
+            return 'excited';
+        }
+        if (mood == 'unhappy' && reason == 'socialLife') {
+            return 'depressed';
+        }
+        if (mood == 'happy' && reason == 'health') {
+            return 'happy';
+        }
+        if (mood == 'unhappy' && reason == 'health') {
+            return 'sick';
+        }
+        if (mood == 'happy' && reason == 'weather') {
+            return 'joyfull';
+        }
+        if (mood == 'unhappy' && reason == 'weather') {
+            return 'pissed';
+        }
+        if (mood == 'happy' && reason == 'freeTime') {
+            return 'excited';
+        }
+        if (mood == 'unhappy' && reason == 'freeTime') {
+            return 'annoyed';
+        }
+        if (mood == 'happy' && reason == 'place') {
+            return 'happy';
+        }
+        if (mood == 'unhappy' && reason == 'place') {
+            return 'unhappy';
+        }
+    };
+    HomePage.prototype.checkMood = function (mood) {
         console.log(mood);
-        if (mood === 'happy') {
-            this.imageUrl = '../assets/img/happy.png';
-        }
-        if (mood === 'unhappy') {
-            this.imageUrl = '../assets/img/unhappy.png';
-        }
+        this.userStateData.mood = mood;
+        this.isVisible = false;
+    };
+    HomePage.prototype.checkReason = function (reason) {
+        console.log(reason);
+        this.userStateData.reason = reason;
+        this.isVisible = true;
+        console.log(this.userStateData);
+        this.storeDataAndDisplayFeely();
+    };
+    HomePage.prototype.storeDataAndDisplayFeely = function () {
+        var imgId = this.findImgIdForMoodAndReason(this.userStateData.mood, this.userStateData.reason);
+        this.displayFeely(imgId);
+        localStorage.setItem('feely-app', JSON.stringify(this.userStateData));
+        console.log(JSON.parse(localStorage.getItem('feely-app')));
+    };
+    HomePage.prototype.displayFeely = function (id) {
+        this.imageUrl = "../assets/img/" + id + ".png";
     };
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'happy\')">\n    Happy\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'unhappy\')">\n    Unhappy\n  </button>\n  <br />\n  <button class="btn btn-primary"\n    (click)="changeImage(\'annoyed\')">\n    Place\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'inLove\')">\n    LoveLife\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'excited\')">\n    SocialLife\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'feelypourri\')">\n    Weather\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'sick\')">\n    Health\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'speaking\')">\n    FreeTime\n  </button>\n  <br />\n  <img [src]="imageUrl"/>\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  \n  <div *ngIf=\'isVisible===true\'>\n    <button (click)="checkMood(\'happy\')">\n      Happy\n    </button>\n\n    <button (click)="checkMood(\'unhappy\')">\n      Unhappy\n    </button>\n  </div>\n\n  <br />\n\n  <div *ngIf=\'isVisible===false\'>\n    <button (click)="checkReason(\'place\')">\n      Place\n    </button>\n\n    <button (click)="checkReason(\'loveLife\')">\n      Love Life\n    </button>\n\n    <button (click)="checkReason(\'socialLife\')">\n      Social Life\n    </button>\n\n    <button (click)="checkReason(\'weather\')">\n      Weather\n    </button>\n\n    <button (click)="checkReason(\'health\')">\n      Health\n    </button>\n\n    <button (click)="checkReason(\'freeTime\')">\n      Free Time\n    </button>\n  </div>\n\n  <br />\n\n  <img [src]="imageUrl">\n\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]) === "function" && _b || Object])
 ], HomePage);
 
+var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
