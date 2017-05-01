@@ -57301,12 +57301,11 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'happy\')">\n    Happy\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'unhappy\')">\n    Unhappy\n  </button>\n  <br />\n  <img [src]="imageUrl"/>\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'happy\')">\n    Happy\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'unhappy\')">\n    Unhappy\n  </button>\n  <br />\n  <button class="btn btn-primary"\n    (click)="changeImage(\'annoyed\')">\n    Place\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'inLove\')">\n    LoveLife\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'excited\')">\n    SocialLife\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'feelypourri\')">\n    Weather\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'sick\')">\n    Health\n  </button>\n  <button class="btn btn-primary"\n    (click)="changeImage(\'speaking\')">\n    FreeTime\n  </button>\n  <br />\n  <img [src]="imageUrl"/>\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]])
 ], HomePage);
 
-var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
