@@ -9,12 +9,13 @@ import { NativeStorage } from '@ionic-native/native-storage';
 export class HomePage {
   title = 'Play with the Feely';
   imageUrl = '../assets/img/neutral.png';
+  placeName: any = '';
   userStateData = {
             mood: "",
             reason: "",
-            placeName: "",
+            placeName: ""
             };
-  isVisible:boolean  = true;
+  isVisible:boolean = true;
   constructor(public navCtrl: NavController, private nativeStorage: NativeStorage) {
 
   }
@@ -58,25 +59,51 @@ export class HomePage {
     }
 }
 
+// step one
 checkMood(mood) {
   console.log(mood);
   this.userStateData.mood = mood
   this.isVisible = false
 }
 
+// step two
 checkReason(reason) {
   console.log(reason);
   this.userStateData.reason = reason
   this.isVisible = true
   console.log(this.userStateData);
+  this.userStateData.placeName = this.placeName;
+  this.clearPlaceName();
   this.storeDataAndDisplayFeely();
 }
 
+// store data in object
+storeUserStateData(userStateData) {
+      console.log(userStateData)
+    let objetBase = {
+        "mood": userStateData.mood,
+        "reason": userStateData.reason,
+        "placeName": userStateData.placeName,
+        date: Date.now()
+    }
+    if (userStateData.placeName.length > 0) {
+        objetBase.placeName = userStateData.placeName
+    }
+
+    // this.database.create(`comportement/${this.formData.uid}`, objetBase)
+}
+
+clearPlaceName(){
+  this.placeName = '';
+}
+
+// store&display feely
 storeDataAndDisplayFeely(){
   let imgId = this.findImgIdForMoodAndReason(this.userStateData.mood, this.userStateData.reason);
+  this.storeUserStateData(this.userStateData);
   this.displayFeely(imgId);
-  localStorage.setItem('feely-app', JSON.stringify(this.userStateData))
-  console.log(JSON.parse(localStorage.getItem('feely-app')))
+  // localStorage.setItem('feely-app', JSON.stringify(this.userStateData))
+  // console.log(JSON.parse(localStorage.getItem('feely-app')))
 }
 
 displayFeely(id){

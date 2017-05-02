@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  
+
   <div *ngIf='isVisible===true'>
     <button (click)="checkMood('happy')">
       Happy
@@ -21,6 +21,11 @@
   <br />
 
   <div *ngIf='isVisible===false'>
+
+    <input [(ngModel)]="placeName" type="text">
+
+    <br />
+
     <button (click)="checkReason('place')">
       Place
     </button>
