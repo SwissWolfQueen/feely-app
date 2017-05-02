@@ -71,7 +71,7 @@ checkReason(reason) {
   console.log(reason);
   this.userStateData.reason = reason
   this.isVisible = true
-  console.log(this.userStateData);
+  //console.log(this.userStateData);
   this.userStateData.placeName = this.placeName;
   this.clearPlaceName();
   this.storeDataAndDisplayFeely();
