@@ -57288,13 +57288,23 @@ var HomePage = (function () {
         this.title = 'Play with the Feely';
         this.imageUrl = '../assets/img/neutral.png';
         this.placeName = '';
+        this.humeurBase = 0;
         this.userStateData = {
             mood: "",
             reason: "",
             placeName: ""
         };
         this.isVisible = true;
+        this.readCalcAndDisplayBaseMood();
     }
+    HomePage.prototype.findMoodNumber = function (mood) {
+        if (mood == 'happy') {
+            return 1;
+        }
+        if (mood == 'unhappy') {
+            return -1;
+        }
+    };
     HomePage.prototype.findImgIdForMoodAndReason = function (mood, reason) {
         if (mood == 'happy' && reason == 'loveLife') {
             return 'inLove';
@@ -57361,7 +57371,49 @@ var HomePage = (function () {
         if (userStateData.placeName.length > 0) {
             objetBase.placeName = userStateData.placeName;
         }
-        // this.database.create(`comportement/${this.formData.uid}`, objetBase)
+        // Est-ce qu'il y a un truc dans le localStorage?
+        //Je récupère le localStorage
+        var datas = JSON.parse(localStorage.getItem('feely-app'));
+        // Si y a qqch dedans on y rajoute (datas.push) et on store en stringifiant
+        if (datas) {
+            datas.push(objetBase);
+            localStorage.setItem('feely-app', JSON.stringify(datas));
+        }
+        else {
+            datas = [];
+            datas.push(objetBase);
+            localStorage.setItem('feely-app', JSON.stringify(datas));
+        }
+        console.log(JSON.parse(localStorage.getItem('feely-app')));
+    };
+    HomePage.prototype.readLastTwentyMood = function () {
+        var datas = JSON.parse(localStorage.getItem('feely-app'));
+        if (datas) {
+            return datas.reverse()
+                .slice(0, 21);
+        }
+        else {
+            return [];
+        }
+    };
+    HomePage.prototype.readCalcAndDisplayBaseMood = function () {
+        var tab = this.readLastTwentyMood();
+        console.log(tab.length);
+        this.humeurBase = 0;
+        for (var i = 0; i < tab.length; i++) {
+            console.log('toto');
+            this.humeurBase += this.findMoodNumber(tab[i].mood);
+            console.log(this.findMoodNumber(tab[i].mood));
+        }
+        if (this.humeurBase === 0) {
+            this.displayFeely('neutral');
+        }
+        if (this.humeurBase >= 1) {
+            this.displayFeely('happy');
+        }
+        if (this.humeurBase <= -1) {
+            this.displayFeely('unhappy');
+        }
     };
     HomePage.prototype.clearPlaceName = function () {
         this.placeName = '';
@@ -57371,8 +57423,6 @@ var HomePage = (function () {
         var imgId = this.findImgIdForMoodAndReason(this.userStateData.mood, this.userStateData.reason);
         this.storeUserStateData(this.userStateData);
         this.displayFeely(imgId);
-        // localStorage.setItem('feely-app', JSON.stringify(this.userStateData))
-        // console.log(JSON.parse(localStorage.getItem('feely-app')))
     };
     HomePage.prototype.displayFeely = function (id) {
         this.imageUrl = "../assets/img/" + id + ".png";
@@ -57381,7 +57431,7 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div *ngIf=\'isVisible===true\'>\n    <button (click)="checkMood(\'happy\')">\n      Happy\n    </button>\n\n    <button (click)="checkMood(\'unhappy\')">\n      Unhappy\n    </button>\n  </div>\n\n  <br />\n\n  <div *ngIf=\'isVisible===false\'>\n\n    <input [(ngModel)]="placeName" type="text">\n\n    <br />\n\n    <button (click)="checkReason(\'place\')">\n      Place\n    </button>\n\n    <button (click)="checkReason(\'loveLife\')">\n      Love Life\n    </button>\n\n    <button (click)="checkReason(\'socialLife\')">\n      Social Life\n    </button>\n\n    <button (click)="checkReason(\'weather\')">\n      Weather\n    </button>\n\n    <button (click)="checkReason(\'health\')">\n      Health\n    </button>\n\n    <button (click)="checkReason(\'freeTime\')">\n      Free Time\n    </button>\n  </div>\n\n  <br />\n\n  <img [src]="imageUrl">\n\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div *ngIf=\'isVisible===true\'>\n    <button (click)="checkMood(\'happy\')">\n      Happy\n    </button>\n\n    <button (click)="checkMood(\'unhappy\')">\n      Unhappy\n    </button>\n\n    <button md-button class="btnhappy"\n            (click)="checkMood(\'happy\')">\n      <img src="./assets/img/happyIcon.svg"/>\n    </button>\n  </div>\n\n  <br />\n\n  <div *ngIf=\'isVisible===false\'>\n\n    <input [(ngModel)]="placeName" type="text">\n\n    <br />\n\n    <button (click)="checkReason(\'place\')">\n      Place\n    </button>\n\n    <button (click)="checkReason(\'loveLife\')">\n      Love Life\n    </button>\n\n    <button (click)="checkReason(\'socialLife\')">\n      Social Life\n    </button>\n\n    <button (click)="checkReason(\'weather\')">\n      Weather\n    </button>\n\n    <button (click)="checkReason(\'health\')">\n      Health\n    </button>\n\n    <button (click)="checkReason(\'freeTime\')">\n      Free Time\n    </button>\n  </div>\n\n  <br />\n\n  <img [src]="imageUrl">\n\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/angular-kati/feely-app/feely-app/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]) === "function" && _b || Object])
 ], HomePage);

@@ -10,6 +10,7 @@ export class HomePage {
   title = 'Play with the Feely';
   imageUrl = '../assets/img/neutral.png';
   placeName: any = '';
+  humeurBase: number = 0;
   userStateData = {
             mood: "",
             reason: "",
@@ -17,8 +18,17 @@ export class HomePage {
             };
   isVisible:boolean = true;
   constructor(public navCtrl: NavController, private nativeStorage: NativeStorage) {
-
+    this.readCalcAndDisplayBaseMood();
   }
+
+  findMoodNumber(mood) {
+    if (mood == 'happy') {
+        return 1
+    }
+    if (mood == 'unhappy') {
+        return -1
+    }
+}
 
   findImgIdForMoodAndReason(mood, reason) {
     if (mood == 'happy' && reason == 'loveLife') {
@@ -90,8 +100,57 @@ storeUserStateData(userStateData) {
         objetBase.placeName = userStateData.placeName
     }
 
-    // this.database.create(`comportement/${this.formData.uid}`, objetBase)
+    // Est-ce qu'il y a un truc dans le localStorage?
+
+    //Je récupère le localStorage
+    let datas = JSON.parse(localStorage.getItem('feely-app'));
+
+    // Si y a qqch dedans on y rajoute (datas.push) et on store en stringifiant
+    if (datas){
+        datas.push(objetBase);
+        localStorage.setItem('feely-app', JSON.stringify(datas))
+    }
+    //Sinon on crée un tableau vide pour pouvoir storer les datas dedans
+    else {
+        datas = [];
+        datas.push(objetBase);
+        localStorage.setItem('feely-app', JSON.stringify(datas))
+    }
+    console.log(JSON.parse(localStorage.getItem('feely-app')));
 }
+
+    readLastTwentyMood() {
+        let datas = JSON.parse(localStorage.getItem('feely-app'));
+
+        if (datas){
+            return datas.reverse()
+                        .slice(0, 21);
+        }
+
+        else {
+          return [];
+        }
+    }
+
+    readCalcAndDisplayBaseMood() {
+            let tab = this.readLastTwentyMood()
+            console.log(tab.length);
+            this.humeurBase = 0
+            for (let i = 0; i < tab.length; i++) {
+              console.log('toto');
+              this.humeurBase += this.findMoodNumber(tab[i].mood)
+              console.log(this.findMoodNumber(tab[i].mood));
+            }
+            if (this.humeurBase === 0) {
+                this.displayFeely('neutral');
+            }
+            if (this.humeurBase >= 1) {
+                this.displayFeely('happy');
+            }
+            if (this.humeurBase <= -1) {
+                this.displayFeely('unhappy');
+            }
+    }
 
 clearPlaceName(){
   this.placeName = '';
@@ -102,8 +161,6 @@ storeDataAndDisplayFeely(){
   let imgId = this.findImgIdForMoodAndReason(this.userStateData.mood, this.userStateData.reason);
   this.storeUserStateData(this.userStateData);
   this.displayFeely(imgId);
-  // localStorage.setItem('feely-app', JSON.stringify(this.userStateData))
-  // console.log(JSON.parse(localStorage.getItem('feely-app')))
 }
 
 displayFeely(id){
