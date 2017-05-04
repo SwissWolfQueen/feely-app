@@ -2,7 +2,7 @@
 * @Author: admin
 * @Date:   2017-05-03T03:55:16+02:00
 * @Last modified by:   admin
-* @Last modified time: 2017-05-04T12:37:55+02:00
+* @Last modified time: 2017-05-04T13:16:13+02:00
 */
 
 
@@ -151,6 +151,8 @@ storeUserStateData(userStateData) {
         return [];
       }
     }
+
+    
 
     readCalcAndDisplayBaseMood() {
       let tab = this.readLastTwentyMood()
