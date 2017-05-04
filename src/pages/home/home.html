@@ -1,0 +1,75 @@
+<!--
+@Author: admin
+@Date:   2017-05-03T03:55:16+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-04T10:44:55+02:00
+-->
+
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div *ngIf='isVisible===true'>
+    <button md-button class="btnz"
+            (click)="checkMood('happy')">
+      <img src="./assets/icon/happyIcon.svg"/>
+    </button>
+
+    <button md-button class="btnz"
+            (click)="checkMood('unhappy')">
+      <img src="./assets/icon/unhappyIcon.svg"/>
+    </button>
+  </div>
+
+  <br />
+
+  <div *ngIf='isVisible===false'>
+
+    <input [(ngModel)]="placeName" type="text">
+
+    <br />
+
+    <button md-button class="btnz"
+            (click)="checkReason('loveLife')">
+      <img src="./assets/icon/loveLifeIcon.svg"/>
+    </button>
+
+    <button md-button class="btnz"
+            (click)="checkReason('place')">
+      <img src="./assets/icon/placeIcon.svg"/>
+    </button>
+
+    <button md-button class="btnz"
+            (click)="checkReason('socialLife')">
+      <img src="./assets/icon/socialLifeIcon.svg"/>
+    </button>
+
+    <button md-button class="btnz"
+            (click)="checkReason('weather')">
+      <img src="./assets/icon/weatherIcon.svg"/>
+    </button>
+
+    <button md-button class="btnz"
+            (click)="checkReason('health')">
+      <img src="./assets/icon/healthIcon.svg"/>
+    </button>
+
+    <button md-button class="btnz"
+            (click)="checkReason('freeTime')">
+      <img src="./assets/icon/freeTimeIcon.svg"/>
+    </button>
+  </div>
+
+  <br />
+
+  <img [src]="imageUrl">
+
+  </ion-content>
