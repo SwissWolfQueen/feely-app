@@ -2,7 +2,7 @@
 @Author: admin
 @Date:   2017-05-03T03:55:16+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-04T10:44:55+02:00
+@Last modified time: 2017-05-05T12:44:53+02:00
 -->
 
 
@@ -71,5 +71,14 @@
   <br />
 
   <img [src]="imageUrl">
+
+  <br />
+
+  <ul>
+    <li *ngFor="let item of behaviourTab">
+      <!-- <img src="./assets/icon/{{icon}}.svg"/> -->
+      {{item}}
+    </li>
+  </ul>
 
   </ion-content>

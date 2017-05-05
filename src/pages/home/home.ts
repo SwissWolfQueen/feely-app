@@ -2,7 +2,7 @@
 * @Author: admin
 * @Date:   2017-05-03T03:55:16+02:00
 * @Last modified by:   admin
-* @Last modified time: 2017-05-04T13:16:13+02:00
+* @Last modified time: 2017-05-05T12:54:41+02:00
 */
 
 
@@ -18,6 +18,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 export class HomePage {
   title = 'Play with the Feely';
   imageUrl = '../assets/img/neutral.svg';
+  behaviourTab: string[]=[];
   placeName: any = '';
   humeurBase: number = 0;
   userStateData = {
@@ -28,6 +29,7 @@ export class HomePage {
   isVisible:boolean = true;
   constructor(public navCtrl: NavController, private nativeStorage: NativeStorage) {
     this.readCalcAndDisplayBaseMood();
+    this.displayLastFiveBehaviour();
   }
 
   findMoodNumber(mood) {
@@ -96,84 +98,6 @@ checkReason(reason) {
   this.storeDataAndDisplayFeely();
 }
 
-// store data in object
-storeUserStateData(userStateData) {
-      console.log(userStateData)
-    let objetBase = {
-        "mood": userStateData.mood,
-        "reason": userStateData.reason,
-        "placeName": userStateData.placeName,
-        date: Date.now()
-    }
-    if (userStateData.placeName.length > 0) {
-        objetBase.placeName = userStateData.placeName
-    }
-
-    // Est-ce qu'il y a un truc dans le localStorage?
-
-    //Je récupère le localStorage
-    let datas = JSON.parse(localStorage.getItem('feely-app'));
-
-    // Si y a qqch dedans on y rajoute (datas.push) et on store en stringifiant
-    if (datas){
-        datas.push(objetBase);
-        localStorage.setItem('feely-app', JSON.stringify(datas))
-    }
-    //Sinon on crée un tableau vide pour pouvoir storer les datas dedans
-    else {
-        datas = [];
-        datas.push(objetBase);
-        localStorage.setItem('feely-app', JSON.stringify(datas))
-    }
-    console.log(JSON.parse(localStorage.getItem('feely-app')));
-}
-
-    readLastTwentyMood() {
-      let datas = JSON.parse(localStorage.getItem('feely-app'));
-
-      if (datas){
-          return datas.reverse()
-                      .slice(0, 21);
-      }
-      else {
-        return [];
-      }
-    }
-
-    readLastFive() {
-      let datas = JSON.parse(localStorage.getItem('feely-app'));
-
-      if (datas){
-          return datas.reverse()
-                      .slice(0, 6);
-      }
-      else {
-        return [];
-      }
-    }
-
-    
-
-    readCalcAndDisplayBaseMood() {
-      let tab = this.readLastTwentyMood()
-      console.log(tab.length);
-      this.humeurBase = 0
-      for (let i = 0; i < tab.length; i++) {
-        console.log('toto');
-        this.humeurBase += this.findMoodNumber(tab[i].mood)
-        console.log(this.findMoodNumber(tab[i].mood));
-      }
-      if (this.humeurBase === 0) {
-          this.displayFeely('neutral');
-      }
-      if (this.humeurBase >= 1) {
-          this.displayFeely('happy');
-      }
-      if (this.humeurBase <= -1) {
-          this.displayFeely('unhappy');
-      }
-    }
-
 clearPlaceName(){
   this.placeName = '';
 }
@@ -188,6 +112,98 @@ storeDataAndDisplayFeely(){
 displayFeely(id){
   this.imageUrl = `../assets/img/${id}.svg`
 }
+
+// store data in object
+storeUserStateData(userStateData) {
+  console.log(userStateData)
+  let objetBase = {
+      "mood": userStateData.mood,
+      "reason": userStateData.reason,
+      "placeName": userStateData.placeName,
+      date: Date.now()
+  }
+  if (userStateData.placeName.length > 0) {
+      objetBase.placeName = userStateData.placeName
+  }
+
+  // Est-ce qu'il y a un truc dans le localStorage?
+
+  //Je récupère le localStorage
+  let datas = JSON.parse(localStorage.getItem('feely-app'));
+
+  // Si y a qqch dedans on y rajoute (datas.push) et on store en stringifiant
+  if (datas){
+      datas.push(objetBase);
+      localStorage.setItem('feely-app', JSON.stringify(datas))
+  }
+  //Sinon on crée un tableau vide pour pouvoir storer les datas dedans
+  else {
+      datas = [];
+      datas.push(objetBase);
+      localStorage.setItem('feely-app', JSON.stringify(datas))
+  }
+  console.log(JSON.parse(localStorage.getItem('feely-app')));
+}
+
+readLastTwentyMood() {
+  let datas = JSON.parse(localStorage.getItem('feely-app'));
+
+  if (datas){
+      return datas.reverse()
+                  .slice(0, 21);
+  }
+  else {
+    return [];
+  }
+}
+
+readCalcAndDisplayBaseMood() {
+  let tab = this.readLastTwentyMood()
+  console.log(tab.length);
+  this.humeurBase = 0
+  for (let i = 0; i < tab.length; i++) {
+    console.log('toto');
+    this.humeurBase += this.findMoodNumber(tab[i].mood)
+    console.log(this.findMoodNumber(tab[i].mood));
+  }
+  if (this.humeurBase === 0) {
+      this.displayFeely('neutral');
+  }
+  if (this.humeurBase >= 1) {
+      this.displayFeely('happy');
+  }
+  if (this.humeurBase <= -1) {
+      this.displayFeely('unhappy');
+  }
+}
+
+readLastFiveBehaviour() {
+  let datas = JSON.parse(localStorage.getItem('feely-app'));
+
+  if (datas){
+      return datas.reverse()
+                  .slice(0, 5);
+  }
+  else {
+    return [];
+  }
+}
+
+displayLastFiveBehaviour() {
+  let tab = this.readLastFiveBehaviour()
+  console.log(tab.length)
+      for (let i = 0; i < tab.length; i++) {
+        console.log('tata');
+              let comportement = tab[i]
+              if (comportement.placeName) {
+                  this.behaviourTab.push(comportement.mood + ": " + comportement.reason + ", " + comportement.placeName)
+              } else {
+                  this.behaviourTab.push(comportement.mood + ": " + comportement.reason)
+              }
+      }
+  };
+
+
 
   // changeImage(mood) {
   //   console.log(mood);

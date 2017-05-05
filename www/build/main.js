@@ -57283,7 +57283,7 @@ var StatusBar = (function () {
 * @Author: admin
 * @Date:   2017-05-03T03:55:16+02:00
 * @Last modified by:   admin
-* @Last modified time: 2017-05-04T12:37:55+02:00
+* @Last modified time: 2017-05-05T12:54:41+02:00
 */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57303,6 +57303,7 @@ var HomePage = (function () {
         this.nativeStorage = nativeStorage;
         this.title = 'Play with the Feely';
         this.imageUrl = '../assets/img/neutral.svg';
+        this.behaviourTab = [];
         this.placeName = '';
         this.humeurBase = 0;
         this.userStateData = {
@@ -57312,6 +57313,7 @@ var HomePage = (function () {
         };
         this.isVisible = true;
         this.readCalcAndDisplayBaseMood();
+        this.displayLastFiveBehaviour();
     }
     HomePage.prototype.findMoodNumber = function (mood) {
         if (mood == 'happy') {
@@ -57375,6 +57377,18 @@ var HomePage = (function () {
         this.clearPlaceName();
         this.storeDataAndDisplayFeely();
     };
+    HomePage.prototype.clearPlaceName = function () {
+        this.placeName = '';
+    };
+    // store&display feely
+    HomePage.prototype.storeDataAndDisplayFeely = function () {
+        var imgId = this.findImgIdForMoodAndReason(this.userStateData.mood, this.userStateData.reason);
+        this.storeUserStateData(this.userStateData);
+        this.displayFeely(imgId);
+    };
+    HomePage.prototype.displayFeely = function (id) {
+        this.imageUrl = "../assets/img/" + id + ".svg";
+    };
     // store data in object
     HomePage.prototype.storeUserStateData = function (userStateData) {
         console.log(userStateData);
@@ -57412,16 +57426,6 @@ var HomePage = (function () {
             return [];
         }
     };
-    HomePage.prototype.readLastFive = function () {
-        var datas = JSON.parse(localStorage.getItem('feely-app'));
-        if (datas) {
-            return datas.reverse()
-                .slice(0, 6);
-        }
-        else {
-            return [];
-        }
-    };
     HomePage.prototype.readCalcAndDisplayBaseMood = function () {
         var tab = this.readLastTwentyMood();
         console.log(tab.length);
@@ -57441,23 +57445,36 @@ var HomePage = (function () {
             this.displayFeely('unhappy');
         }
     };
-    HomePage.prototype.clearPlaceName = function () {
-        this.placeName = '';
+    HomePage.prototype.readLastFiveBehaviour = function () {
+        var datas = JSON.parse(localStorage.getItem('feely-app'));
+        if (datas) {
+            return datas.reverse()
+                .slice(0, 5);
+        }
+        else {
+            return [];
+        }
     };
-    // store&display feely
-    HomePage.prototype.storeDataAndDisplayFeely = function () {
-        var imgId = this.findImgIdForMoodAndReason(this.userStateData.mood, this.userStateData.reason);
-        this.storeUserStateData(this.userStateData);
-        this.displayFeely(imgId);
+    HomePage.prototype.displayLastFiveBehaviour = function () {
+        var tab = this.readLastFiveBehaviour();
+        console.log(tab.length);
+        for (var i = 0; i < tab.length; i++) {
+            console.log('tata');
+            var comportement = tab[i];
+            if (comportement.placeName) {
+                this.behaviourTab.push(comportement.mood + ": " + comportement.reason + ", " + comportement.placeName);
+            }
+            else {
+                this.behaviourTab.push(comportement.mood + ": " + comportement.reason);
+            }
+        }
     };
-    HomePage.prototype.displayFeely = function (id) {
-        this.imageUrl = "../assets/img/" + id + ".svg";
-    };
+    ;
     return HomePage;
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/pages/home/home.html"*/'<!--\n@Author: admin\n@Date:   2017-05-03T03:55:16+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-04T10:44:55+02:00\n-->\n\n\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div *ngIf=\'isVisible===true\'>\n    <button md-button class="btnz"\n            (click)="checkMood(\'happy\')">\n      <img src="./assets/icon/happyIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkMood(\'unhappy\')">\n      <img src="./assets/icon/unhappyIcon.svg"/>\n    </button>\n  </div>\n\n  <br />\n\n  <div *ngIf=\'isVisible===false\'>\n\n    <input [(ngModel)]="placeName" type="text">\n\n    <br />\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'loveLife\')">\n      <img src="./assets/icon/loveLifeIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'place\')">\n      <img src="./assets/icon/placeIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'socialLife\')">\n      <img src="./assets/icon/socialLifeIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'weather\')">\n      <img src="./assets/icon/weatherIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'health\')">\n      <img src="./assets/icon/healthIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'freeTime\')">\n      <img src="./assets/icon/freeTimeIcon.svg"/>\n    </button>\n  </div>\n\n  <br />\n\n  <img [src]="imageUrl">\n\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/pages/home/home.html"*/'<!--\n@Author: admin\n@Date:   2017-05-03T03:55:16+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-05T12:44:53+02:00\n-->\n\n\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div *ngIf=\'isVisible===true\'>\n    <button md-button class="btnz"\n            (click)="checkMood(\'happy\')">\n      <img src="./assets/icon/happyIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkMood(\'unhappy\')">\n      <img src="./assets/icon/unhappyIcon.svg"/>\n    </button>\n  </div>\n\n  <br />\n\n  <div *ngIf=\'isVisible===false\'>\n\n    <input [(ngModel)]="placeName" type="text">\n\n    <br />\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'loveLife\')">\n      <img src="./assets/icon/loveLifeIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'place\')">\n      <img src="./assets/icon/placeIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'socialLife\')">\n      <img src="./assets/icon/socialLifeIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'weather\')">\n      <img src="./assets/icon/weatherIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'health\')">\n      <img src="./assets/icon/healthIcon.svg"/>\n    </button>\n\n    <button md-button class="btnz"\n            (click)="checkReason(\'freeTime\')">\n      <img src="./assets/icon/freeTimeIcon.svg"/>\n    </button>\n  </div>\n\n  <br />\n\n  <img [src]="imageUrl">\n\n  <br />\n\n  <ul>\n    <li *ngFor="let item of behaviourTab">\n      <!-- <img src="./assets/icon/{{icon}}.svg"/> -->\n      {{item}}\n    </li>\n  </ul>\n\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/pages/home/home.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]) === "function" && _b || Object])
 ], HomePage);
