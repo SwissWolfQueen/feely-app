@@ -74,11 +74,10 @@
 
   <br />
 
-  <ul>
-    <li *ngFor="let item of behaviourTab">
-      <!-- <img src="./assets/icon/{{icon}}.svg"/> -->
-      {{item}}
-    </li>
-  </ul>
+    <div *ngFor="let item of behaviourTab">
+
+    <behaviour [mood]="item.mood" [reason]="item.reason" [note]="item.placeName"></behaviour>
+
+  </div>
 
   </ion-content>

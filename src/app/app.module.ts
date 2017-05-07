@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Behaviour } from '../components/behaviour/behaviour';
 
 import { NativeStorage } from '@ionic-native/native-storage';
 
@@ -13,7 +14,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    Behaviour
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    Behaviour
   ],
   providers: [
     StatusBar,

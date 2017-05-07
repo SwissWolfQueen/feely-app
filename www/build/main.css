@@ -24313,6 +24313,10 @@ ion-navbar.toolbar {
   }
 }
 
+.content {
+  background-color: #ffffb3;
+}
+
 .btnz {
   background: transparent;
 }

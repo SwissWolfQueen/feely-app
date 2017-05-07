@@ -10,6 +10,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
+import { Behaviour, } from '../components/behaviour/behaviour';
 
 @Component({
   selector: 'page-home',
@@ -18,7 +19,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
 export class HomePage {
   title = 'Play with the Feely';
   imageUrl = '../assets/img/neutral.svg';
-  behaviourTab: string[]=[];
+  behaviourTab: any[]=[];
   placeName: any = '';
   humeurBase: number = 0;
   userStateData = {
@@ -190,17 +191,8 @@ readLastFiveBehaviour() {
 }
 
 displayLastFiveBehaviour() {
-  let tab = this.readLastFiveBehaviour()
-  console.log(tab.length)
-      for (let i = 0; i < tab.length; i++) {
-        console.log('tata');
-              let comportement = tab[i]
-              if (comportement.placeName) {
-                  this.behaviourTab.push(comportement.mood + ": " + comportement.reason + ", " + comportement.placeName)
-              } else {
-                  this.behaviourTab.push(comportement.mood + ": " + comportement.reason)
-              }
-      }
+  this.behaviourTab = this.readLastFiveBehaviour()
+
   };
 
 
