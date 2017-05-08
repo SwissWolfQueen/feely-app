@@ -17,6 +17,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Behaviour } from '../components/behaviour/behaviour';
 import { XtremeBehaviour } from '../components/xtreme-behaviour/xtreme-behaviour';
+import { FeelyIcon } from '../components/feely-icon/feely-icon';
 
 import { NativeStorage } from '@ionic-native/native-storage';
 
@@ -26,7 +27,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
     MyApp,
     HomePage,
     Behaviour,
-    XtremeBehaviour
+    XtremeBehaviour,
+    FeelyIcon
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
     MyApp,
     HomePage,
     Behaviour,
-    XtremeBehaviour
+    XtremeBehaviour,
+    FeelyIcon
   ],
   providers: [
     StatusBar,

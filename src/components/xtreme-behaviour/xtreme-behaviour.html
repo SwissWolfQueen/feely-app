@@ -5,14 +5,10 @@
 @Last modified time: 2017-05-08T12:58:30+02:00
 -->
 
+<feely-icon [identity]="xtremereason.maxReason" size="normal" [off]="true"></feely-icon>
 
-<img *ngIf="xtremereason.minReason==='loveLife'" src="./assets/icon/loveIconOff.svg"/>
-<img *ngIf="xtremereason.minReason==='socialLife'" src="./assets/icon/socialIconOff.svg"/>
-<img *ngIf="xtremereason.minReason==='place'" src="./assets/icon/placeIconOff.svg"/>
-<img *ngIf="xtremereason.minReason==='weather'" src="./assets/icon/weatherIconOff.svg"/>
-<img *ngIf="xtremereason.minReason==='health'" src="./assets/icon/healthIconOff.svg"/>
-<img *ngIf="xtremereason.minReason==='freeTime'" src="./assets/icon/freeTimeIconOff.svg"/>
-{{ xtremereason.minReason }}
-{{xtremereason.minReason}}
-{{xtremereason.minReason}}
-{{xtremereason.minReason}}
+<feely-icon identity="trendUp" size="normal" [off]="false"></feely-icon>
+
+<feely-icon [identity]="xtremereason.minReason" size="normal" [off]="true"></feely-icon>
+
+<feely-icon identity="trendDown" size="normal" [off]="false"></feely-icon>

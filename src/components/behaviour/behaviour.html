@@ -5,16 +5,10 @@
 @Last modified time: 2017-05-08T10:19:15+02:00
 -->
 
+<feely-icon [identity]="mood" size="small" [off]="false"></feely-icon>
 
+<span> : </span>
 
-<img *ngIf="mood==='happy'" src="./assets/icon/happyIconSmall.svg"/>
-<img *ngIf="mood==='unhappy'" src="./assets/icon/unhappyIconSmall.svg"/>
-
-<img *ngIf="reason==='loveLife'" src="./assets/icon/loveIconSmallOff.svg"/>
-<img *ngIf="reason==='place'" src="./assets/icon/placeIconSmallOff.svg"/>
-<img *ngIf="reason==='socialLife'" src="./assets/icon/socialIconSmallOff.svg"/>
-<img *ngIf="reason==='weather'" src="./assets/icon/weatherIconSmallOff.svg"/>
-<img *ngIf="reason==='health'" src="./assets/icon/healthIconSmallOff.svg"/>
-<img *ngIf="reason==='freeTime'" src="./assets/icon/freeTimeIconSmallOff.svg"/>
+<feely-icon [identity]="reason" size="small" [off]="true"></feely-icon>
 
 {{note}}

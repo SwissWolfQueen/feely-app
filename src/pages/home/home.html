@@ -15,75 +15,79 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-  <div *ngIf='isVisible===true'>
-    <button md-button class="btnz"
-            (click)="checkMood('happy')">
-      <img src="./assets/icon/happyIcon.svg"/>
-    </button>
+  <div id="entries">
 
-    <button md-button class="btnz"
-            (click)="checkMood('unhappy')">
-      <img src="./assets/icon/unhappyIcon.svg"/>
-    </button>
-  </div>
+    <div id="moodButtons" *ngIf='isVisible===true'>
+      <button md-button class="btnz"
+              (click)="checkMood('happy')">
+        <span class="bubble happy"><feely-icon identity="happy" size="normal" [off]="false"></feely-icon></span>
+      </button>
 
-  <br />
+      <button md-button class="btnz"
+              (click)="checkMood('unhappy')">
+        <span class="bubble unhappy"><feely-icon identity="unhappy" size="normal" [off]="false"></feely-icon></span>
+      </button>
+    </div>
 
-  <div *ngIf='isVisible===false'>
+    <div id="reasonButton" *ngIf='isVisible===false'>
 
-    <input [(ngModel)]="placeName" type="text">
+      <feely-icon [identity]="userStateData.mood" size="normal" [off]="false"></feely-icon>
 
-    <br />
+      <input [(ngModel)]="placeName" type="text">
 
-    <button md-button class="btnz"
-            (click)="checkReason('loveLife')">
-      <img src="./assets/icon/loveLifeIcon.svg"/>
-    </button>
+      <div class="reasonBubble">
+        <button md-button class="btnz"
+                (click)="checkReason('loveLife')">
+          <feely-icon identity="loveLife" size="normal" [off]="false"></feely-icon>
+        </button>
 
-    <button md-button class="btnz"
-            (click)="checkReason('place')">
-      <img src="./assets/icon/placeIcon.svg"/>
-    </button>
+        <button md-button class="btnz"
+                (click)="checkReason('place')">
+          <feely-icon identity="place" size="normal" [off]="false"></feely-icon>
+        </button>
 
-    <button md-button class="btnz"
-            (click)="checkReason('socialLife')">
-      <img src="./assets/icon/socialLifeIcon.svg"/>
-    </button>
+        <button md-button class="btnz"
+                (click)="checkReason('socialLife')">
+          <feely-icon identity="socialLife" size="normal" [off]="false"></feely-icon>
+        </button>
 
-    <button md-button class="btnz"
-            (click)="checkReason('weather')">
-      <img src="./assets/icon/weatherIcon.svg"/>
-    </button>
+        <button md-button class="btnz"
+                (click)="checkReason('weather')">
+          <feely-icon identity="weather" size="normal" [off]="false"></feely-icon>
+        </button>
 
-    <button md-button class="btnz"
-            (click)="checkReason('health')">
-      <img src="./assets/icon/healthIcon.svg"/>
-    </button>
+        <button md-button class="btnz"
+                (click)="checkReason('health')">
+          <feely-icon identity="health" size="normal" [off]="false"></feely-icon>
+        </button>
 
-    <button md-button class="btnz"
-            (click)="checkReason('freeTime')">
-      <img src="./assets/icon/freeTimeIcon.svg"/>
-    </button>
-  </div>
-
-  <br />
-
-  <img [src]="imageUrl">
-
-  <br />
-
-    <div>
-
-    <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>
+        <button md-button class="btnz"
+                (click)="checkReason('freeTime')">
+          <feely-icon identity="freeTime" size="normal" [off]="false"></feely-icon>
+        </button>
+      </div>
 
     </div>
 
-    <div *ngFor="let item of behaviourTab">
+  </div>
+  <div id="feely">
+    <img [src]="imageUrl">
+  </div>
 
-    <behaviour [mood]="item.mood" [reason]="item.reason" [note]="item.placeName"></behaviour>
+  <div id="stats">
+    <div class="xtremebehaviours">
 
+    <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>
+    
+    </div>
+
+    <div class="behaviours">
+
+    <behaviour *ngFor="let item of behaviourTab" [mood]="item.mood" [reason]="item.reason" [note]="item.placeName"></behaviour>
+
+    </div>
   </div>
 
   </ion-content>

@@ -10,8 +10,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
-import { Behaviour } from '../components/behaviour/behaviour';
-import { XtremeBehaviour } from '../components/xtreme-behaviour/xtreme-behaviour';
+// import { Behaviour } from '../components/behaviour/behaviour';
+// import { XtremeBehaviour } from '../components/xtreme-behaviour/xtreme-behaviour';
 
 @Component({
   selector: 'page-home',

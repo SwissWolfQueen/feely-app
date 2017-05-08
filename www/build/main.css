@@ -24314,9 +24314,62 @@ ion-navbar.toolbar {
 }
 
 .content {
-  background-color: #fffcc2;
+  background-color: #ffff99;
+  padding: 0px;
 }
 
 .btnz {
   background: transparent;
+}
+
+#entries {
+  padding: 12px;
+  text-align: center;
+}
+
+.reasonBubble {
+  width: 350px;
+  height: 200px;
+  background-image: url("/assets/icon/reasonBubble.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12px;
+}
+
+.bubble {
+  width: 70px;
+  height: 75px;
+  display: block;
+  background-image: url("/assets/icon/moodBubble.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 12px;
+}
+
+#stats {
+  background: #ffffcc;
+  padding: 12px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#feely {
+  text-align: center;
+}
+
+.xtremebehaviours {
+  width: 160px;
+  height: 150px;
+}
+
+.behaviours {
+  width: 220px;
+  height: 150px;
+}
+
+.behaviours behaviour {
+  display: block;
 }
