@@ -1,0 +1,26 @@
+<!--
+@Author: admin
+@Date:   2017-05-08T10:08:41+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-08T10:08:49+02:00
+-->
+
+
+
+
+<svg width="19px" height="29px" viewBox="0 0 19 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-197.000000, -500.000000)">
+            <g id="PlaceIconSmallOff" transform="translate(197.000000, 499.000000)">
+                <g id="Maps" transform="translate(0.796010, 0.982774)" fill="#F3E42D">
+                    <path d="M17.4397086,8.71985429 C17.4397086,3.90401175 13.5356968,0 8.71985429,0 C3.90401175,0 0,3.90401175 0,8.71985429 L8.72188179,29.040229 L17.4397086,8.71985429 Z" id="Oval-4"></path>
+                    <path d="M8.71985429,8.34050981 C8.71985429,8.34050981 17.4820832,24.0992216 17.4820832,29.066181 C17.4820832,29.066181 0.0431856623,29.066181 0.0431856623,29.066181 C0.0431856623,23.6746639 8.71985429,8.34050981 8.71985429,8.34050981 Z" id="Triangle-2" transform="translate(8.762634, 18.703345) scale(1, -1) translate(-8.762634, -18.703345) "></path>
+                </g>
+                <circle id="Oval-3" fill="#FFFCDB" cx="9.51586437" cy="9.70262817" r="5.39800504"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,3 +1,12 @@
+/**
+* @Author: admin
+* @Date:   2017-05-08T09:23:16+02:00
+* @Last modified by:   admin
+* @Last modified time: 2017-05-08T12:38:21+02:00
+*/
+
+
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -7,6 +16,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Behaviour } from '../components/behaviour/behaviour';
+import { XtremeBehaviour } from '../components/xtreme-behaviour/xtreme-behaviour';
 
 import { NativeStorage } from '@ionic-native/native-storage';
 
@@ -15,7 +25,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
   declarations: [
     MyApp,
     HomePage,
-    Behaviour
+    Behaviour,
+    XtremeBehaviour
   ],
   imports: [
     BrowserModule,
@@ -25,7 +36,8 @@ import { NativeStorage } from '@ionic-native/native-storage';
   entryComponents: [
     MyApp,
     HomePage,
-    Behaviour
+    Behaviour,
+    XtremeBehaviour
   ],
   providers: [
     StatusBar,
