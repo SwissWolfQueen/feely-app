@@ -2,7 +2,7 @@
 * @Author: admin
 * @Date:   2017-05-03T03:55:16+02:00
 * @Last modified by:   admin
-* @Last modified time: 2017-05-08T12:39:08+02:00
+* @Last modified time: 2017-05-09T12:33:28+02:00
 */
 
 
@@ -107,6 +107,10 @@ checkReason(reason) {
   this.storeDataAndDisplayFeely();
   this.displayLastFiveBehaviour();
 }
+
+// changeSizeFeely(){
+//   this.imageUrl.height = 140;
+// }
 
 clearPlaceName(){
   this.placeName = '';

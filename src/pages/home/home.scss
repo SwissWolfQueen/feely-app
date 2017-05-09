@@ -1,7 +1,7 @@
 // @Author: admin
 // @Date:   2017-05-03T03:55:16+02:00
 // @Last modified by:   admin
-// @Last modified time: 2017-05-04T11:30:28+02:00
+// @Last modified time: 2017-05-09T12:10:30+02:00
 
 
 
@@ -14,29 +14,29 @@ page-home {
 }
 
 #entries{
-  padding: 12px;
+  padding: 10px;
   text-align: center;
+}
+
+input{
+  margin-bottom: 13px;
+  text-align: left;
+}
+
+.feelyImg{
+  height: 300px;
+  max-width: 95%;
 }
 
 .reasonBubble{
   width: 350px;
-  height: 200px;
+  height: 179px;
   background-image: url('/assets/icon/reasonBubble.svg');
   background-repeat: no-repeat;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 12px;
-}
-
-.bubble{
-  width: 70px;
-  height: 75px;
-  display: block;
-  background-image: url('/assets/icon/moodBubble.svg');
-  background-repeat: no-repeat;
-  text-align: center;
-  padding-top: 12px;
+  padding-top: 20px;
 }
 
 #stats{
@@ -50,8 +50,10 @@ page-home {
 }
 
 .xtremebehaviours{
-  width: 160px;
+  width: 300px;
   height: 150px;
+  padding-left: 12px;
+  padding-top: 12px;
 }
 
 .behaviours{

@@ -57283,7 +57283,7 @@ var StatusBar = (function () {
 * @Author: admin
 * @Date:   2017-05-03T03:55:16+02:00
 * @Last modified by:   admin
-* @Last modified time: 2017-05-08T12:39:08+02:00
+* @Last modified time: 2017-05-09T12:33:28+02:00
 */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57388,6 +57388,9 @@ var HomePage = (function () {
         this.storeDataAndDisplayFeely();
         this.displayLastFiveBehaviour();
     };
+    // changeSizeFeely(){
+    //   this.imageUrl.height = 140;
+    // }
     HomePage.prototype.clearPlaceName = function () {
         this.placeName = '';
     };
@@ -57518,11 +57521,12 @@ var HomePage = (function () {
 }());
 HomePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-home',template:/*ion-inline-start:"/home/swisswolfqueen/Dev/feely-app/src/pages/home/home.html"*/'<!--\n@Author: admin\n@Date:   2017-05-03T03:55:16+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-08T12:45:57+02:00\n-->\n\n\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <div id="entries">\n\n    <div id="moodButtons" *ngIf=\'isVisible===true\'>\n      <button md-button class="btnz"\n              (click)="checkMood(\'happy\')">\n        <span class="bubble happy"><feely-icon identity="happy" size="normal" [off]="false"></feely-icon></span>\n      </button>\n\n      <button md-button class="btnz"\n              (click)="checkMood(\'unhappy\')">\n        <span class="bubble unhappy"><feely-icon identity="unhappy" size="normal" [off]="false"></feely-icon></span>\n      </button>\n    </div>\n\n    <div id="reasonButton" *ngIf=\'isVisible===false\'>\n\n      <feely-icon [identity]="userStateData.mood" size="normal" [off]="false"></feely-icon>\n\n      <input [(ngModel)]="placeName" type="text">\n\n      <div class="reasonBubble">\n        <button md-button class="btnz"\n                (click)="checkReason(\'loveLife\')">\n          <feely-icon identity="loveLife" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'place\')">\n          <feely-icon identity="place" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'socialLife\')">\n          <feely-icon identity="socialLife" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'weather\')">\n          <feely-icon identity="weather" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'health\')">\n          <feely-icon identity="health" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'freeTime\')">\n          <feely-icon identity="freeTime" size="normal" [off]="false"></feely-icon>\n        </button>\n      </div>\n\n    </div>\n\n  </div>\n  <div id="feely">\n    <img [src]="imageUrl">\n  </div>\n\n  <div id="stats">\n    <div class="xtremebehaviours">\n\n    <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>\n    \n    </div>\n\n    <div class="behaviours">\n\n    <behaviour *ngFor="let item of behaviourTab" [mood]="item.mood" [reason]="item.reason" [note]="item.placeName"></behaviour>\n\n    </div>\n  </div>\n\n  </ion-content>\n'/*ion-inline-end:"/home/swisswolfqueen/Dev/feely-app/src/pages/home/home.html"*/
+        selector: 'page-home',template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/pages/home/home.html"*/'<!--\n@Author: admin\n@Date:   2017-05-03T03:55:16+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-09T11:56:02+02:00\n-->\n\n\n\n<ion-header>\n  <ion-navbar>\n    <ion-title>\n      {{title}}\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <div id="entries">\n\n    <div id="moodButtons" *ngIf=\'isVisible===true\'>\n      <button md-button class="btnz"\n              (click)="checkMood(\'happy\')">\n        <feely-icon identity="happyBubble" size="normal" [off]="false"></feely-icon>\n      </button>\n\n      <button md-button class="btnz"\n              (click)="checkMood(\'unhappy\')">\n        <feely-icon identity="unhappyBubble" size="normal" [off]="false"></feely-icon>\n      </button>\n    </div>\n\n    <div id="reasonButton" *ngIf=\'isVisible===false\'>\n\n      <feely-icon [identity]="userStateData.mood" size="normal" [off]="false"></feely-icon>\n\n      <input [(ngModel)]="placeName" type="text">\n\n      <div class="reasonBubble">\n        <button md-button class="btnz"\n                (click)="checkReason(\'loveLife\')">\n          <feely-icon identity="loveLife" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'place\')">\n          <feely-icon identity="place" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'socialLife\')">\n          <feely-icon identity="socialLife" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'weather\')">\n          <feely-icon identity="weather" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'health\')">\n          <feely-icon identity="health" size="normal" [off]="false"></feely-icon>\n        </button>\n\n        <button md-button class="btnz"\n                (click)="checkReason(\'freeTime\')">\n          <feely-icon identity="freeTime" size="normal" [off]="false"></feely-icon>\n        </button>\n      </div>\n\n    </div>\n\n  </div>\n  <div id="feely">\n    <img class="feelyImg" [src]="imageUrl">\n  </div>\n\n  <div id="stats">\n    <div class="xtremebehaviours">\n\n    <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>\n\n    </div>\n\n    <div class="behaviours">\n\n    <behaviour *ngFor="let item of behaviourTab" [mood]="item.mood" [reason]="item.reason" [note]="item.placeName"></behaviour>\n\n    </div>\n  </div>\n\n  </ion-content>\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/pages/home/home.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_native_storage__["a" /* NativeStorage */]) === "function" && _b || Object])
 ], HomePage);
 
+var _a, _b;
 //# sourceMappingURL=home.js.map
 
 /***/ }),
@@ -104823,7 +104827,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"/home/swisswolfqueen/Dev/feely-app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/home/swisswolfqueen/Dev/feely-app/src/app/app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/app/app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/app/app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -104874,7 +104878,7 @@ __decorate([
 ], Behaviour.prototype, "note", void 0);
 Behaviour = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'behaviour',template:/*ion-inline-start:"/home/swisswolfqueen/Dev/feely-app/src/components/behaviour/behaviour.html"*/'<!--\n@Author: admin\n@Date:   2017-05-08T09:23:16+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-08T10:19:15+02:00\n-->\n\n<feely-icon [identity]="mood" size="small" [off]="false"></feely-icon>\n\n<span> : </span>\n\n<feely-icon [identity]="reason" size="small" [off]="true"></feely-icon>\n\n{{note}}\n'/*ion-inline-end:"/home/swisswolfqueen/Dev/feely-app/src/components/behaviour/behaviour.html"*/
+        selector: 'behaviour',template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/components/behaviour/behaviour.html"*/'<!--\n@Author: admin\n@Date:   2017-05-08T09:23:16+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-08T10:19:15+02:00\n-->\n\n<feely-icon [identity]="mood" size="small" [off]="false"></feely-icon>\n\n<span> : </span>\n\n<feely-icon [identity]="reason" size="small" [off]="true"></feely-icon>\n\n{{note}}\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/components/behaviour/behaviour.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], Behaviour);
@@ -104935,7 +104939,7 @@ __decorate([
 ], FeelyIcon.prototype, "off", void 0);
 FeelyIcon = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'feely-icon',template:/*ion-inline-start:"/home/swisswolfqueen/Dev/feely-app/src/components/feely-icon/feely-icon.html"*/'\n<img src="./assets/icon/{{buildFileName()}}.svg"/>\n'/*ion-inline-end:"/home/swisswolfqueen/Dev/feely-app/src/components/feely-icon/feely-icon.html"*/
+        selector: 'feely-icon',template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/components/feely-icon/feely-icon.html"*/'\n<img src="./assets/icon/{{buildFileName()}}.svg"/>\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/components/feely-icon/feely-icon.html"*/
     })
 ], FeelyIcon);
 
@@ -104977,7 +104981,7 @@ __decorate([
 ], XtremeBehaviour.prototype, "xtremereason", void 0);
 XtremeBehaviour = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'xtreme-behaviour',template:/*ion-inline-start:"/home/swisswolfqueen/Dev/feely-app/src/components/xtreme-behaviour/xtreme-behaviour.html"*/'<!--\n@Author: admin\n@Date:   2017-05-08T12:35:24+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-08T12:58:30+02:00\n-->\n\n<feely-icon [identity]="xtremereason.maxReason" size="normal" [off]="true"></feely-icon>\n\n<feely-icon identity="trendUp" size="normal" [off]="false"></feely-icon>\n\n<feely-icon [identity]="xtremereason.minReason" size="normal" [off]="true"></feely-icon>\n\n<feely-icon identity="trendDown" size="normal" [off]="false"></feely-icon>\n'/*ion-inline-end:"/home/swisswolfqueen/Dev/feely-app/src/components/xtreme-behaviour/xtreme-behaviour.html"*/
+        selector: 'xtreme-behaviour',template:/*ion-inline-start:"/Users/admin/Desktop/KATI/feely-app/src/components/xtreme-behaviour/xtreme-behaviour.html"*/'<!--\n@Author: admin\n@Date:   2017-05-08T12:35:24+02:00\n@Last modified by:   admin\n@Last modified time: 2017-05-08T12:58:30+02:00\n-->\n\n<feely-icon [identity]="xtremereason.maxReason" size="normal" [off]="true"></feely-icon>\n\n<feely-icon identity="trendUp" size="normal" [off]="false"></feely-icon>\n\n<feely-icon [identity]="xtremereason.minReason" size="normal" [off]="true"></feely-icon>\n\n<feely-icon identity="trendDown" size="normal" [off]="false"></feely-icon>\n'/*ion-inline-end:"/Users/admin/Desktop/KATI/feely-app/src/components/xtreme-behaviour/xtreme-behaviour.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], XtremeBehaviour);

@@ -2,7 +2,7 @@
 @Author: admin
 @Date:   2017-05-03T03:55:16+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-08T12:45:57+02:00
+@Last modified time: 2017-05-09T11:56:02+02:00
 -->
 
 
@@ -22,12 +22,12 @@
     <div id="moodButtons" *ngIf='isVisible===true'>
       <button md-button class="btnz"
               (click)="checkMood('happy')">
-        <span class="bubble happy"><feely-icon identity="happy" size="normal" [off]="false"></feely-icon></span>
+        <feely-icon identity="happyBubble" size="normal" [off]="false"></feely-icon>
       </button>
 
       <button md-button class="btnz"
               (click)="checkMood('unhappy')">
-        <span class="bubble unhappy"><feely-icon identity="unhappy" size="normal" [off]="false"></feely-icon></span>
+        <feely-icon identity="unhappyBubble" size="normal" [off]="false"></feely-icon>
       </button>
     </div>
 
@@ -73,14 +73,14 @@
 
   </div>
   <div id="feely">
-    <img [src]="imageUrl">
+    <img class="feelyImg" [src]="imageUrl">
   </div>
 
   <div id="stats">
     <div class="xtremebehaviours">
 
     <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>
-    
+
     </div>
 
     <div class="behaviours">
