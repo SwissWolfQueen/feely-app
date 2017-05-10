@@ -1,0 +1,38 @@
+<!--
+@Author: admin
+@Date:   2017-05-03T03:55:16+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-10T11:58:32+02:00
+-->
+
+
+
+<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="200.365126%" id="linearGradient-1">
+            <stop stop-color="#FFF0B8" offset="0%"></stop>
+            <stop stop-color="#FF8100" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait-Copy" transform="translate(-199.000000, -185.000000)">
+            <g id="WeatherIcon" transform="translate(201.000000, 187.000000)">
+                <circle id="Oval-2-Copy-18" stroke="#FF8100" stroke-width="3" fill="url(#linearGradient-1)" cx="24.0712891" cy="24.0712891" r="24.0712891"></circle>
+                <circle id="Oval-2-Copy-9" fill="#FF8100" cx="22.3928223" cy="21.3928223" r="11.3928223"></circle>
+                <path d="M5.5,21.5 L38.5,21.5" id="Line" stroke="#FF8100" stroke-linecap="square"></path>
+                <path d="M22,38 L22,5" id="Line-Copy" stroke="#FF8100" stroke-linecap="square"></path>
+                <path d="M10.3327381,9.83273811 L33.6672619,33.1672619" id="Line-Copy-3" stroke="#FF8100" stroke-linecap="square"></path>
+                <path d="M10.4791847,32.8137085 L33.8137085,9.47918472" id="Line-Copy-2" stroke="#FF8100" stroke-linecap="square"></path>
+                <g id="Cloud" transform="translate(14.000000, 24.000000)" fill="#FFBE5C">
+                    <ellipse id="Oval-5" cx="16" cy="9" rx="12" ry="4"></ellipse>
+                    <ellipse id="Oval-5-Copy-4" cx="18.5" cy="4" rx="7.5" ry="4"></ellipse>
+                    <ellipse id="Oval-5-Copy" cx="12" cy="11" rx="12" ry="4"></ellipse>
+                    <ellipse id="Oval-5-Copy-2" cx="14" cy="15" rx="10" ry="4"></ellipse>
+                    <ellipse id="Oval-5-Copy-3" cx="18" cy="12" rx="10" ry="4"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

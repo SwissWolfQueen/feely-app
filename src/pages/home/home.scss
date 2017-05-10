@@ -1,7 +1,7 @@
 // @Author: admin
 // @Date:   2017-05-03T03:55:16+02:00
 // @Last modified by:   admin
-// @Last modified time: 2017-05-09T12:10:30+02:00
+// @Last modified time: 2017-05-10T12:14:39+02:00
 
 
 
@@ -21,6 +21,8 @@ page-home {
 input{
   margin-bottom: 13px;
   text-align: left;
+  border-bottom: 2px;
+  border-bottom-color: #D2D2D2;
 }
 
 .feelyImg{
@@ -53,12 +55,14 @@ input{
   width: 300px;
   height: 150px;
   padding-left: 12px;
-  padding-top: 12px;
+  padding-top: 8px;
 }
 
 .behaviours{
   width: 220px;
   height: 150px;
+  padding-top: 10px;
+  display: inline-grid;
 }
 
 .behaviours behaviour{

@@ -2,16 +2,20 @@
 @Author: admin
 @Date:   2017-05-09T11:51:43+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-09T11:51:55+02:00
+@Last modified time: 2017-05-10T11:58:35+02:00
 -->
-
 
 
 
 <svg width="67px" height="76px" viewBox="0 0 67 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="143.247768%" id="linearGradient-1">
+            <stop stop-color="#FFAEB5" offset="0%"></stop>
+            <stop stop-color="#FF001E" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Mobile-Portrait" transform="translate(-205.000000, -88.000000)">
             <g id="unhappyBubbleIcon" transform="translate(207.000000, 90.000000)">
@@ -21,7 +25,7 @@
                     <polygon id="Triangle" points="18.359375 70.7336426 20 57 29.9719238 60.8503418"></polygon>
                 </g>
                 <g id="UnhappyIconSmall" transform="translate(14.000000, 14.000000)">
-                    <circle id="Oval-2-Copy-2" stroke="#D0011B" stroke-width="3" fill="#F85E59" cx="17.5" cy="17.5" r="17.5"></circle>
+                    <circle id="Oval-2-Copy-2" stroke="#D0011B" stroke-width="3" fill="url(#linearGradient-1)" cx="17.5" cy="17.5" r="17.5"></circle>
                     <path d="M25,28 C25,23.581722 21.6421356,20 17.5,20 C13.3578644,20 10,23.581722 10,28" id="Oval-2-Copy-4" stroke="#D0011B" stroke-width="3"></path>
                     <ellipse id="Oval-3-Copy-5" fill="#D0021B" cx="7.5" cy="14.5" rx="2.5" ry="3.5"></ellipse>
                     <ellipse id="Oval-3-Copy-4" fill="#D0011B" cx="27.5" cy="14.5" rx="2.5" ry="3.5"></ellipse>

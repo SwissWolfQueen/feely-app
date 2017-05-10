@@ -2,7 +2,7 @@
 @Author: admin
 @Date:   2017-05-03T03:55:16+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-09T11:56:02+02:00
+@Last modified time: 2017-05-10T12:55:48+02:00
 -->
 
 
@@ -33,9 +33,16 @@
 
     <div id="reasonButton" *ngIf='isVisible===false'>
 
-      <feely-icon [identity]="userStateData.mood" size="normal" [off]="false"></feely-icon>
-
-      <input [(ngModel)]="placeName" type="text">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <feely-icon [identity]="userStateData.mood" size="normal" [off]="false"></feely-icon>
+          </ion-col>
+          <ion-col col-10>
+            <ion-input [(ngModel)]="placeName" type="text" color="primary"></ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
       <div class="reasonBubble">
         <button md-button class="btnz"
@@ -79,7 +86,7 @@
   <div id="stats">
     <div class="xtremebehaviours">
 
-    <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>
+    <xtreme-behaviour *ngIf="xtremReason.minReason.length>0 || xtremReason.maxReason.length>0" [xtremereason]="xtremReason"></xtreme-behaviour>
 
     </div>
 

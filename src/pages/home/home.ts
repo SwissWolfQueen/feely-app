@@ -2,7 +2,7 @@
 * @Author: admin
 * @Date:   2017-05-03T03:55:16+02:00
 * @Last modified by:   admin
-* @Last modified time: 2017-05-09T12:33:28+02:00
+* @Last modified time: 2017-05-10T12:35:37+02:00
 */
 
 
@@ -34,7 +34,7 @@ export class HomePage {
             socialLife: 0,
             weather: 0,
             health: 0,
-            hobbies: 0
+            freeTime: 0
           };
   dataCount = 0;
   xtremReason = {
@@ -221,16 +221,17 @@ displayBestAndWorstReasonPerWeek() {
   let oneWeekMilliSec = (7 * 24 * 3600 * 1000)
   let oneWeekAgo = (Date.now() - oneWeekMilliSec)
   let tab = JSON.parse(localStorage.getItem('feely-app'));
-      for (let i = 0; i < tab.length; i++) {
-            this.dataCount += 1;
-            let comportement = tab[i]
-            if (comportement.date > oneWeekAgo) {
-                let change = this.findMoodNumber(comportement.mood);
-                this.bestOrWorstReason[comportement.reason] += change;
-            } else {
-                return;
-            }
-      }
+  if (tab){
+    for (let i = 0; i < tab.length; i++) {
+          this.dataCount += 1;
+          let comportement = tab[i]
+          if (comportement.date > oneWeekAgo) {
+              let change = this.findMoodNumber(comportement.mood);
+              this.bestOrWorstReason[comportement.reason] += change;
+          } else {
+              return;
+          }
+    }
     console.log(this.bestOrWorstReason);
 
     for (let key in this.bestOrWorstReason) {
@@ -251,11 +252,13 @@ displayBestAndWorstReasonPerWeek() {
                 this.xtremReason.maxReasonValue = stat
             }
         }
-
-
-        //this.displayXtremeBehaviour();
-
     }
+  }
+
+  else{
+    return;
+  }
+
     console.log(this.xtremReason);
 }
 

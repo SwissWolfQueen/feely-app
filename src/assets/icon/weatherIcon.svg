@@ -1,12 +1,25 @@
+<!--
+@Author: admin
+@Date:   2017-05-03T03:55:16+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-10T11:58:32+02:00
+-->
+
+
 
 <svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
-    <defs></defs>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="200.365126%" id="linearGradient-1">
+            <stop stop-color="#FFF0B8" offset="0%"></stop>
+            <stop stop-color="#FF8100" offset="100%"></stop>
+        </linearGradient>
+    </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Mobile-Portrait-Copy" transform="translate(-199.000000, -185.000000)">
             <g id="WeatherIcon" transform="translate(201.000000, 187.000000)">
-                <circle id="Oval-2-Copy-18" stroke="#FF8100" stroke-width="3" fill="#FFE6C0" cx="24.0712891" cy="24.0712891" r="24.0712891"></circle>
+                <circle id="Oval-2-Copy-18" stroke="#FF8100" stroke-width="3" fill="url(#linearGradient-1)" cx="24.0712891" cy="24.0712891" r="24.0712891"></circle>
                 <circle id="Oval-2-Copy-9" fill="#FF8100" cx="22.3928223" cy="21.3928223" r="11.3928223"></circle>
                 <path d="M5.5,21.5 L38.5,21.5" id="Line" stroke="#FF8100" stroke-linecap="square"></path>
                 <path d="M22,38 L22,5" id="Line-Copy" stroke="#FF8100" stroke-linecap="square"></path>

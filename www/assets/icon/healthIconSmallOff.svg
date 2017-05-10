@@ -2,21 +2,20 @@
 @Author: admin
 @Date:   2017-05-08T10:09:03+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-08T10:09:09+02:00
+@Last modified time: 2017-05-10T10:32:17+02:00
 -->
 
 
-
-
-<svg width="27px" height="27px" viewBox="0 0 27 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="25px" height="24px" viewBox="0 0 25 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Mobile-Portrait" transform="translate(-193.000000, -532.000000)" fill="#F3E42D">
-            <g id="HealthIconSmallOff" transform="translate(193.000000, 532.000000)">
-                <rect id="Rectangle" x="7.934186" y="0.557264001" width="11.475212" height="26.229056"></rect>
-                <rect id="Rectangle-Copy-2" transform="translate(13.671792, 13.671792) rotate(90.000000) translate(-13.671792, -13.671792) " x="7.934186" y="0.557264001" width="11.475212" height="26.229056"></rect>
+        <g id="Mobile-Portrait" transform="translate(-262.000000, -190.000000)">
+            <g id="HealthIconSmallOff" transform="translate(264.000000, 192.000000)">
+                <ellipse id="Oval-2-Copy-25" stroke="#F2E42D" stroke-width="3" fill="#FFFDE2" cx="10.3162667" cy="10.2801172" rx="10.3162667" ry="10.1099414"></ellipse>
+                <rect id="Rectangle" fill="#F3E42D" x="7.36411902" y="3.84941927" width="5.63195801" height="13.1454405"></rect>
+                <polyline id="Rectangle-Copy-2" fill="#F3E42D" points="16.7802734 7.37945956 16.7802734 13.1305898 3.90722656 13.1305898 3.90722656 7.37945956"></polyline>
             </g>
         </g>
     </g>

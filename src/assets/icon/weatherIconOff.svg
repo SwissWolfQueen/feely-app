@@ -2,30 +2,28 @@
 @Author: admin
 @Date:   2017-05-08T10:06:41+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-08T10:06:49+02:00
+@Last modified time: 2017-05-10T12:00:16+02:00
 -->
 
 
 
-
-<svg width="56px" height="59px" viewBox="0 0 56 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Mobile-Portrait" transform="translate(-153.000000, -225.000000)">
-            <g id="WeatherIconOff" transform="translate(153.000000, 226.000000)">
-                <ellipse id="Oval-2-Copy-9" fill="#F3E42D" cx="26.393677" cy="24.9547837" rx="17.1702716" ry="17.2173393"></ellipse>
-                <path d="M0.934283324,25.1167554 L50.6690155,25.1167554" id="Line" stroke="#F2E42D" stroke-linecap="square"></path>
-                <path d="M25.8016494,50.0522886 L25.8016494,0.181222189" id="Line-Copy" stroke="#F2E42D" stroke-linecap="square"></path>
-                <path d="M8.21776623,7.48467078 L43.3855326,42.74884" id="Line-Copy-3" stroke="#F2E42D" stroke-linecap="square"></path>
-                <path d="M8.43847783,42.2145345 L43.6062442,6.95036518" id="Line-Copy-2" stroke="#F2E42D" stroke-linecap="square"></path>
-                <g id="Cloud" transform="translate(13.744745, 28.894867)" fill="#F3E42D">
-                    <ellipse id="Oval-5" cx="24.1138096" cy="13.6011999" rx="18.0853572" ry="6.04497775"></ellipse>
-                    <ellipse id="Oval-5-Copy-4" cx="27.8815923" cy="6.04497775" rx="11.3033482" ry="6.04497775"></ellipse>
-                    <ellipse id="Oval-5-Copy" cx="18.0853572" cy="16.6236888" rx="18.0853572" ry="6.04497775"></ellipse>
-                    <ellipse id="Oval-5-Copy-2" cx="21.0995834" cy="22.6686666" rx="15.071131" ry="6.04497775"></ellipse>
-                    <ellipse id="Oval-5-Copy-3" cx="27.1280357" cy="18.1349333" rx="15.071131" ry="6.04497775"></ellipse>
+        <g id="Mobile-Portrait" transform="translate(-8.000000, -177.000000)">
+            <g id="WeatherIconOff" transform="translate(10.000000, 179.000000)">
+                <circle id="Oval-2-Copy-18" stroke="#F2E42D" stroke-width="3" fill="#FFFDE2" cx="32.4463228" cy="32.4463228" r="32.4463228"></circle>
+                <circle id="Oval-2-Copy-9" fill="#F2E42D" cx="30.1838733" cy="29.8359471" r="15.3566844"></circle>
+                <path d="M7.41359447,29.9804147 L51.8951613,29.9804147" id="Line" stroke="#F2E42D" stroke-linecap="square"></path>
+                <path d="M29.6543779,52.2211982 L29.6543779,7.73963134" id="Line-Copy" stroke="#F2E42D" stroke-linecap="square"></path>
+                <path d="M13.9277691,14.253806 L45.3809866,45.7070235" id="Line-Copy-3" stroke="#F2E42D" stroke-linecap="square"></path>
+                <path d="M14.1251683,45.2304596 L45.5783859,13.7772421" id="Line-Copy-2" stroke="#F2E42D" stroke-linecap="square"></path>
+                <g id="Cloud" transform="translate(18.870968, 33.350230)" fill="#F2E42D">
+                    <ellipse id="Oval-5" cx="21.5668203" cy="12.1313364" rx="16.1751152" ry="5.39170507"></ellipse>
+                    <ellipse id="Oval-5-Copy-4" cx="24.9366359" cy="5.39170507" rx="10.109447" ry="5.39170507"></ellipse>
+                    <ellipse id="Oval-5-Copy" cx="16.1751152" cy="14.8271889" rx="16.1751152" ry="5.39170507"></ellipse>
                 </g>
             </g>
         </g>
