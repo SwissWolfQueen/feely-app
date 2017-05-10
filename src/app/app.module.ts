@@ -19,8 +19,11 @@ import { Behaviour } from '../components/behaviour/behaviour';
 import { XtremeBehaviour } from '../components/xtreme-behaviour/xtreme-behaviour';
 import { FeelyIcon } from '../components/feely-icon/feely-icon';
 
+import { BehaviourService } from '../components/behaviour/behaviourService';
+
 import { NativeStorage } from '@ionic-native/native-storage';
 
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,7 @@ import { NativeStorage } from '@ionic-native/native-storage';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -40,12 +44,13 @@ import { NativeStorage } from '@ionic-native/native-storage';
     HomePage,
     Behaviour,
     XtremeBehaviour,
-    FeelyIcon
+    FeelyIcon,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     NativeStorage,
+    BehaviourService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

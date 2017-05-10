@@ -39,7 +39,7 @@
             <feely-icon [identity]="userStateData.mood" size="normal" [off]="false"></feely-icon>
           </ion-col>
           <ion-col col-10>
-            <ion-input [(ngModel)]="placeName" type="text" color="primary"></ion-input>
+            <ion-input class="noteInput" [(ngModel)]="note" type="text" color="primary"></ion-input>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -86,13 +86,13 @@
   <div id="stats">
     <div class="xtremebehaviours">
 
-    <xtreme-behaviour *ngIf="xtremReason.minReason.length>0 || xtremReason.maxReason.length>0" [xtremereason]="xtremReason"></xtreme-behaviour>
+    <xtreme-behaviour [xtremereason]="xtremReason"></xtreme-behaviour>
 
     </div>
 
     <div class="behaviours">
 
-    <behaviour *ngFor="let item of behaviourTab" [mood]="item.mood" [reason]="item.reason" [note]="item.placeName"></behaviour>
+    <behaviour *ngFor="let item of behaviourTab" [mood]="item.mood" [reason]="item.reason" [note]="item.note"></behaviour>
 
     </div>
   </div>
