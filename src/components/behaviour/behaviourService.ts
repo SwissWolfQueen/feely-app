@@ -15,7 +15,7 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class BehaviourService {
 
-  url = "https://boiling-cliffs-15389.herokuapp.com/"
+  url = "https://boiling-cliffs-15389.herokuapp.com"
 
   constructor(private http: Http) {
   }
