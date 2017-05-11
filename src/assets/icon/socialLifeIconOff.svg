@@ -1,0 +1,31 @@
+<!--
+@Author: admin
+@Date:   2017-05-08T10:05:40+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-10T10:46:08+02:00
+-->
+
+<svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-8.000000, -252.000000)">
+            <g id="SocialIconOff" transform="translate(10.000000, 254.000000)">
+                <circle id="Oval-2-Copy-11" stroke="#F2E42D" stroke-width="3" fill="#FFFDE2" cx="32.4547658" cy="32.4547658" r="32.4547658"></circle>
+                <circle id="Oval-2-Copy-15" stroke="#F2E42D" fill="#F2E42D" cx="19.1902348" cy="28.0898012" r="13.8274103"></circle>
+                <path d="M25.5113367,30.8552833 C25.5113367,34.3463315 22.8581613,37.1763851 19.5853037,37.1763851 C16.312446,37.1763851 13.6592707,34.3463315 13.6592707,30.8552833 L25.5113367,30.8552833 Z" id="Oval-2-Copy-14" stroke="#FFFDE2"></path>
+                <ellipse id="Oval-3-Copy-15" fill="#FFFDE2" cx="11.4863919" cy="26.7070602" rx="1.97534433" ry="2.76548206"></ellipse>
+                <ellipse id="Oval-3-Copy-14" fill="#FFFDE2" cx="26.6965432" cy="26.7070602" rx="1.97534433" ry="2.76548206"></ellipse>
+                <circle id="Oval-2-Copy-17" stroke="#F2E42D" fill="#F2E42D" cx="46.8450554" cy="29.4725423" r="13.8274103"></circle>
+                <path d="M53.1661573,32.2380243 C53.1661573,35.7290725 50.5129819,38.5591262 47.2401243,38.5591262 C43.9672666,38.5591262 41.3140913,35.7290725 41.3140913,32.2380243 L53.1661573,32.2380243 Z" id="Oval-2-Copy-16" stroke="#FFFDE2"></path>
+                <circle id="Oval-2-Copy-13" stroke="#F2E42D" fill="#F2E42D" cx="31.6349041" cy="46.0654346" r="13.8274103"></circle>
+                <path d="M37.9560059,48.8309167 C37.9560059,52.3219648 35.3028306,55.1520185 32.0299729,55.1520185 C28.7571153,55.1520185 26.10394,52.3219648 26.10394,48.8309167 L37.9560059,48.8309167 Z" id="Oval-2-Copy-12" stroke="#FFFDE2"></path>
+                <ellipse id="Oval-3-Copy-13" fill="#FFFDE2" cx="23.9310612" cy="44.6826936" rx="1.97534433" ry="2.76548206"></ellipse>
+                <ellipse id="Oval-3-Copy-12" fill="#FFFDE2" cx="39.1412125" cy="44.6826936" rx="1.97534433" ry="2.76548206"></ellipse>
+                <ellipse id="Oval-3-Copy-17" fill="#FFFDE2" cx="39.1412125" cy="28.0898012" rx="1.97534433" ry="2.76548206"></ellipse>
+                <ellipse id="Oval-3-Copy-16" fill="#FFFDE2" cx="54.3513639" cy="28.0898012" rx="1.97534433" ry="2.76548206"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,24 @@
+<!--
+@Author: admin
+@Date:   2017-05-08T10:08:41+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-10T10:32:57+02:00
+-->
+
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-262.000000, -218.000000)">
+            <g id="PlaceIconSmallOff" transform="translate(264.000000, 220.000000)">
+                <ellipse id="Oval-2-Copy-24" stroke="#F2E42D" stroke-width="3" fill="#FFFDE2" cx="10.3162667" cy="10.5" rx="10.3162667" ry="10.1099414"></ellipse>
+                <g id="Maps" transform="translate(6.000000, 3.801755)">
+                    <path d="M8.52114378,4.08018477 C8.52114378,1.82676095 6.61362077,0 4.26057189,0 C1.90752301,0 0,1.82676095 0,4.08018477 L4.26156254,13.5884725 L8.52114378,4.08018477 Z" id="Oval-4" fill="#F3E42D"></path>
+                    <path d="M4.26057189,3.90268231 C4.26057189,3.90268231 8.54184829,11.2764816 8.54184829,13.6006159 C8.54184829,13.6006159 0.0211007676,13.6006159 0.0211007676,13.6006159 C0.0211007676,11.0778231 4.26057189,3.90268231 4.26057189,3.90268231 Z" id="Triangle-2" fill="#F3E42D" transform="translate(4.281475, 8.751649) scale(1, -1) translate(-4.281475, -8.751649) "></path>
+                    <ellipse id="Oval-3" fill="#FFFCDB" cx="4.26057189" cy="4.08018477" rx="2.63749688" ry="2.52582867"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

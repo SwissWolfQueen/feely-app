@@ -1,0 +1,33 @@
+<!--
+@Author: admin
+@Date:   2017-05-08T10:09:24+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-08T10:09:32+02:00
+-->
+
+
+
+
+<svg width="31px" height="33px" viewBox="0 0 31 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-192.000000, -590.000000)">
+            <g id="WeatherIconSmallOff" transform="translate(192.000000, 591.000000)">
+                <circle id="Oval-2-Copy-9" fill="#F3E42D" cx="14.3544559" cy="13.5347979" r="9.33821791"></circle>
+                <path d="M0.508119001,13.622647 L27.556833,13.622647" id="Line" stroke="#F2E42D" stroke-linecap="square"></path>
+                <path d="M14.032476,27.147004 L14.032476,0.0982900009" id="Line-Copy" stroke="#F2E42D" stroke-linecap="square"></path>
+                <path d="M4.46931146,4.05948246 L23.5956406,23.1858116" id="Line-Copy-3" stroke="#F2E42D" stroke-linecap="square"></path>
+                <path d="M4.58934759,22.8960187 L23.7156767,3.76968959" id="Line-Copy-2" stroke="#F2E42D" stroke-linecap="square"></path>
+                <g id="Cloud" transform="translate(7.475212, 15.671792)" fill="#F3E42D">
+                    <ellipse id="Oval-5" cx="13.114528" cy="7.376922" rx="9.835896" ry="3.278632"></ellipse>
+                    <ellipse id="Oval-5-Copy-4" cx="15.163673" cy="3.278632" rx="6.147435" ry="3.278632"></ellipse>
+                    <ellipse id="Oval-5-Copy" cx="9.835896" cy="9.016238" rx="9.835896" ry="3.278632"></ellipse>
+                    <ellipse id="Oval-5-Copy-2" cx="11.475212" cy="12.29487" rx="8.19658" ry="3.278632"></ellipse>
+                    <ellipse id="Oval-5-Copy-3" cx="14.753844" cy="9.835896" rx="8.19658" ry="3.278632"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

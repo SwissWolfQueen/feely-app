@@ -1,0 +1,23 @@
+<!--
+@Author: admin
+@Date:   2017-05-09T10:07:19+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-09T10:07:37+02:00
+-->
+
+
+
+<svg width="67px" height="76px" viewBox="0 0 67 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-249.000000, -161.000000)" fill="#FFFFFF">
+            <g id="MoodBubbleLeftSmall" transform="translate(282.500000, 199.500000) scale(-1, 1) translate(-282.500000, -199.500000) translate(251.000000, 163.000000)">
+                <path d="M23.73282,51.787543 C-4.33560212,82.383248 30.9239102,62.1220333 40.949251,55.3798854" id="Path-2-Copy" stroke="#D2D2D2" stroke-width="3" transform="translate(27.025627, 60.000000) rotate(-23.000000) translate(-27.025627, -60.000000) "></path>
+                <circle id="Oval" stroke="#D2D2D2" stroke-width="3" cx="31.5" cy="31.5" r="31.5"></circle>
+                <polygon id="Triangle" points="18.359375 70.7336426 20 57 29.9719238 60.8503418"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

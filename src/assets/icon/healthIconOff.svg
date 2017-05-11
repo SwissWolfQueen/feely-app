@@ -1,0 +1,21 @@
+<!--
+@Author: admin
+@Date:   2017-05-08T10:07:29+02:00
+@Last modified by:   admin
+@Last modified time: 2017-05-10T10:46:55+02:00
+-->
+
+<svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-8.000000, -324.000000)">
+            <g id="HealthIconOff" transform="translate(10.000000, 326.000000)">
+                <circle id="Oval-2-Copy-10" stroke="#F2E42D" stroke-width="3" fill="#FFFDE2" cx="32.4915001" cy="32.4915001" r="32.4915001"></circle>
+                <rect id="Rectangle" fill="#F2E42D" x="22.9466523" y="10.7984246" width="18.8972431" height="43.1936985"></rect>
+                <rect id="Rectangle-Copy-2" fill="#F2E42D" transform="translate(32.395274, 32.395274) rotate(90.000000) translate(-32.395274, -32.395274) " x="22.9466523" y="10.7984246" width="18.8972431" height="43.1936985"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
