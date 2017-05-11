@@ -9,6 +9,39 @@ page-home {
 
 }
 
+.col{
+  padding: 0px
+}
+
+ion-app.md {
+    font-family: "Courier New", monospace;
+    font-size: 1.4rem;
+}
+
+#lovebtn{
+  position: relative;
+  top: 33px;
+  left: 0px;
+}
+
+#weatherbtn{
+  position: relative;
+  top: 33px;
+  left: 0px;
+}
+
+#healthbtn{
+  position: relative;
+  top: 18px;
+  left: 0px;
+}
+
+#freebtn{
+  position: relative;
+  top: 18px;
+  left: 0px;
+}
+
 .btnz{
   background: transparent;
 }
@@ -18,26 +51,45 @@ page-home {
   text-align: center;
 }
 
+#happyIconInput{
+  position: fixed;
+  margin-top: 3px;
+  margin-left: -32px;
+}
+
+#noteIcon{
+  position: fixed;
+  margin-top: 12px;
+  margin-left: -6px;
+}
+
+.noteFont{
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+}
+
 .noteInput{
   margin-bottom: 13px;
   text-align: left;
   border-bottom: 2px solid #D2D2D2;
+  height: 40px;
 }
 
 .feelyImg{
-  height: 300px;
+  height: 250px;
   max-width: 95%;
 }
 
 .reasonBubble{
   width: 350px;
   height: 179px;
-  background-image: url('/assets/icon/reasonBubble.svg');
+  background-image: url("/assets/icon/reasonBubble.svg");
   background-repeat: no-repeat;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-top: 16px;
+  margin-bottom: -85px;
 }
 
 #stats{
