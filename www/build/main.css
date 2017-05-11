@@ -24333,6 +24333,11 @@ ion-navbar.toolbar {
   border-bottom: 2px solid #D2D2D2;
 }
 
+.noteFont {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+}
+
 .feelyImg {
   height: 300px;
   max-width: 95%;
