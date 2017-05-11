@@ -2,23 +2,25 @@
 @Author: admin
 @Date:   2017-05-08T10:06:14+02:00
 @Last modified by:   admin
-@Last modified time: 2017-05-10T10:46:28+02:00
+@Last modified time: 2017-05-08T10:06:24+02:00
 -->
 
-<svg width="69px" height="69px" viewBox="0 0 69 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-   <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-   <desc>Created with Sketch.</desc>
-   <defs></defs>
-   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-       <g id="Mobile-Portrait" transform="translate(-8.000000, -537.000000)">
-           <g id="PlaceIconOff" transform="translate(10.000000, 539.000000)">
-               <circle id="Oval-2-Copy-18" stroke="#F2E42D" stroke-width="3" fill="#FFFDE2" cx="32.4225526" cy="32.4225526" r="32.4225526"></circle>
-               <g id="Maps" transform="translate(17.510204, 8.081633)">
-                   <path d="M28.2857143,14.1428571 C28.2857143,6.33197282 21.9537415,0 14.1428571,0 C6.33197282,0 0,6.33197282 0,14.1428571 L14.1461456,47.1007653 L28.2857143,14.1428571 Z" id="Oval-4" fill="#F2E42D"></path>
-                   <path d="M14.1428571,13.5275929 C14.1428571,13.5275929 28.3544424,39.0868742 28.3544424,47.1428571 C28.3544424,47.1428571 0.0700434471,47.1428571 0.0700434471,47.1428571 C0.0700434471,38.3982781 14.1428571,13.5275929 14.1428571,13.5275929 Z" id="Triangle-2" fill="#F2E42D" transform="translate(14.212243, 30.335225) scale(1, -1) translate(-14.212243, -30.335225) "></path>
-                   <circle id="Oval-3" fill="#FFFDE2" cx="14.1428571" cy="14.1428571" r="8.75510204"></circle>
-               </g>
-           </g>
-       </g>
-   </g>
+
+
+
+<svg width="34px" height="57px" viewBox="0 0 34 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Mobile-Portrait" transform="translate(-23.000000, -274.000000)">
+            <g id="PlaceIconOff" transform="translate(23.000000, 274.000000)">
+                <g id="Maps" transform="translate(0.480050, 0.836383)" fill="#F3E42D">
+                    <path d="M33.0706548,16.6163089 C33.0706548,7.43937488 25.6675366,0 16.5353274,0 C7.40311825,0 0,7.43937488 0,16.6163089 L16.5391721,55.3382429 L33.0706548,16.6163089 Z" id="Oval-4"></path>
+                    <path d="M16.5353274,15.8934407 C16.5353274,15.8934407 33.1510093,45.9227982 33.1510093,55.3876962 C33.1510093,55.3876962 0.0818923163,55.3876962 0.0818923163,55.3876962 C0.0818923163,45.1137731 16.5353274,15.8934407 16.5353274,15.8934407 Z" id="Triangle-2" transform="translate(16.616451, 35.640568) scale(1, -1) translate(-16.616451, -35.640568) "></path>
+                </g>
+                <ellipse id="Oval-3" fill="#FFFCDB" cx="17.0153775" cy="17.4526915" rx="10.2361551" ry="10.2862864"></ellipse>
+            </g>
+        </g>
+    </g>
 </svg>
